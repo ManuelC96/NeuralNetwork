@@ -6,7 +6,6 @@ class Activation(Layer):
         self.activation = activation
         self.activation_prime = activation_prime
 # 
-
     def forward(self, input):
         self.input = input
         return self.activation(self.input)
