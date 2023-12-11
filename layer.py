@@ -1,12 +1,13 @@
-class Layer:
+# parent layer class
+class Layer():
     def __init__(self):
         self.input = None
-        self.otput = None
-# 
-    def forward(self, input):
-        # TODO: return output
+        self.output = None
+    
+    def forwardProp(self, input = None):
+        # TODO return output
         pass
-#   
-    def backward(self, outpur_gradient, learning_rate):
-        # TODO: update parameters and return input gradient
+    
+    def backwardProp(self, output_gradient = None, alpha = None):
+        # TODO updsate parameters and return input_gradient
         pass
