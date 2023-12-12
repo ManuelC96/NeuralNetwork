@@ -9,7 +9,7 @@ class Dense(Layer):
     
     def forwardProp(self, input_gradient = None):
         self.input_gradient = input_gradient
-        output_gradient = np.dot(self.weights, input_gradient) + self.biases
+        output_gradient = np.dot( input_gradient,self.weights ) + self.biases
         return output_gradient
 
     def backwardProp(self, output_gradient = None, alpha = None):
