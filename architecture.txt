@@ -1,0 +1,13 @@
+Fully connected layer
+- collect data
+- understand the shape of data matrix
+- generate random weights param according to data matrix 
+Forward prop
+- linear func = WX + B (all variable refers to matrix)
+Define Error func
+- MSE/MAE/Cross Entropy(binary categorical)/Custom
+Back prop
+- find derivative that suits NN model
+-dE/dW = 
+-dE/dB = dE/dY.dot(X.T)
+-dE/dX = dE/dY.dot(W.T)

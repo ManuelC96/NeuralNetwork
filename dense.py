@@ -13,4 +13,4 @@ class Dense(Layer):
 
     def backwardProp(self, output_gradient = None, alpha = None):
         weights_gradient = np.dot(output_gradient, self.input_gradient.T)
-        biases_gradients
+        biases_gradients = 
