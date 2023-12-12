@@ -9,5 +9,5 @@ class Layer():
         pass
     
     def backwardProp(self, output_gradient = None, alpha = None):
-        # TODO updsate parameters and return input_gradient
+        # TODO update parameters and return input_gradient
         pass
