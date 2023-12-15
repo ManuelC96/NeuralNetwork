@@ -1,4 +1,4 @@
-from layer import Layer
+from layer_parent import Layer
 import numpy as np
 
 class Activation(Layer):
