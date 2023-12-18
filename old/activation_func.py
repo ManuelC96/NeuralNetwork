@@ -7,3 +7,5 @@ class Tanh(Activation):
         tanh_prime = lambda x: 1 - np.tanh(x)
         super().__init__(tanh, tanh_prime)
 
+        
+
