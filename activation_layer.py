@@ -16,7 +16,7 @@ class Activation(Layer):
         return output_gradient
 
     # computation of f'(x)   
-    def backwardProp(self, output_gradient=None):
+    def backwardProp(self, output_gradient=None, learning_rate = None):
         input_gradient = np.multiply(output_gradient, self.activation_func_prime(self.input))
         return input_gradient
 

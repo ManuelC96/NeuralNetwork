@@ -9,6 +9,7 @@ class Dense(Layer):
     def __init__(self, input = None, output = None):
         self.weights = np.random.rand(output, input) 
         self.biases = np.random.rand(output, 1)
+        super().__init__()
 
     
     def forwardProp(self, input_gradient = None):
@@ -21,6 +22,8 @@ class Dense(Layer):
         self.weights = self.weights - np.dot(output_gradient, self.input_gradient.T) * lrn_rate
         self.biases = self.biases - output_gradient * lrn_rate
         input_gradient = np.dot(self.weights.T, output_gradient)
+        Layer.container.clear()
+        Layer.container.append([f"weight: {self.weights}, bias: {self.biases}"])
         return input_gradient
     
 

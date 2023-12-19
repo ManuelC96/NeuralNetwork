@@ -19,7 +19,7 @@ network = [
     Dense(2, 3),
     Tanh(),
     Dense(3, 1),
-    Tanh()
+    Tanh(),
 ]
 
 # define epochs and learning rate
@@ -35,13 +35,14 @@ for e in range(epochs):
         output = x
         # forward prop
         for j in network:
-            output = j.forwardProp(output.T)
+            output = j.forwardProp(output)
         #calculate erro
-        error += ls.mse(Y, output) 
+        error += ls.mse(y, output) 
 
         # backward prop
-        grad = ls.mse_prime(Y, output)
+        grad = ls.mse_prime(y, output)
         for k in reversed(network):
             grad = k.backwardProp(grad, learning_rate)
         
     print(f"error {error}")
+print(j.container)

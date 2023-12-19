@@ -1,5 +1,7 @@
 # parent layer class
 class Layer():
+    # class attribute for containing variables
+    container = []
     def __init__(self):
         self.input = None
         self.output = None
